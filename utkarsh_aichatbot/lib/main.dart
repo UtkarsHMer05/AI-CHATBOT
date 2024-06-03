@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:utkarsh_aichatbot/screen/splash_screen.dart';
 
-void main() async {
+ Future<void> main() async {
 WidgetsFlutterBinding.ensureInitialized();//we wrote this to ensure that the app is getting initialise for the fulscreen mode and orientation
 await SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);//we write await here because the flutterbindging will take time to initialise
  await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp,DeviceOrientation.portraitDown]);
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
  @override
 Widget build(BuildContext context) {
   return const MaterialApp(
-    home:  Scaffold(body:  Text("HELLO"),),
+    debugShowCheckedModeBanner: false,
+    home:  SplashScreen(),
   );
 }
 }
