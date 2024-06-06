@@ -49,7 +49,7 @@ Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (_)=> const Onb
               //45% of the whole screen
             ),
             const Spacer(),
-            CustomLoading(),
+           const CustomLoading(),
             
             const Spacer(),  //loading custom lottie screen
           ],
