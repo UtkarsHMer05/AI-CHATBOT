@@ -11,6 +11,11 @@ environment:
 
 
 dependencies:
+#hive database
+  hive: ^4.0.0-dev.2
+  isar_flutter_libs: ^4.0.0-dev.13
+  #for accessing storage path
+  path_provider: ^2.1.0
   flutter:
     sdk: flutter
 
