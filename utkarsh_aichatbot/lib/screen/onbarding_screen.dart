@@ -88,8 +88,8 @@ class OnbardingScreen extends StatelessWidget {
                       minimumSize: Size(mq.width * .4, 50)),
                   onPressed: () {
                     if (isLast) {
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (_) => const HomeScreen()));
+                      // Navigator.of(context).pushReplacement(MaterialPageRoute(
+                      //     builder: (_) => const HomeScreen()));
                     } else {
                       c.nextPage(
                           duration: const Duration(milliseconds: 600),

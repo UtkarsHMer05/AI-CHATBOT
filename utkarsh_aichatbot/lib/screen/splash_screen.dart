@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:get/instance_manager.dart';
+import 'package:get/route_manager.dart';
 import 'package:utkarsh_aichatbot/helper/global.dart';
 import 'package:utkarsh_aichatbot/helper/pref.dart';
 import 'package:utkarsh_aichatbot/screen/home_screen.dart';
@@ -17,9 +19,13 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     //waiting sometime for splash screen then moving to homescreen
-    Future.delayed(const Duration(seconds: 2), () {
-      Navigator.of(context).pushReplacement(MaterialPageRoute(
-          builder: (_) => Pref.showOnboarding ?  const OnbardingScreen() : const HomeScreen())); //material page route means routing one page to other page(navigating to it)
+    Future.delayed(const Duration(seconds: 2), () 
+    {
+      // Navigator.of(context).pushReplacement(MaterialPageRoute(
+      //     builder: (_) => Pref.showOnboarding ?  const OnbardingScreen() : const HomeScreen())
+    
+      //     ); //material page route means routing one page to other page(navigating to it)
+      Get.off(()=>Pref.showOnboarding ? const OnbardingScreen() : const HomeScreen());
     } //routing to the onboarding screen
         );
   }
