@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:lottie/lottie.dart';
 import 'package:utkarsh_aichatbot/helper/global.dart';
 import 'package:utkarsh_aichatbot/model/home_type.dart';
@@ -10,13 +11,18 @@ class HomeCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Animate.restartOnHotReload=true;
     return Card(
       color: Colors.blue.withOpacity(.25),
       elevation: 0,
       margin: EdgeInsets.only(bottom: mq.height * .02),
       shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(20))),
-      child:homeType.leftAlign ?  Row(
+      child:InkWell(
+        borderRadius: const BorderRadius.all(Radius.circular(20)),
+        onTap: homeType.OnTap,
+        child: 
+      homeType.leftAlign ?  Row(
         children: [
            //lottie
           Container(
@@ -64,6 +70,8 @@ class HomeCard extends StatelessWidget {
           const Spacer(),
         ],
       ),
-    );
+      )
+    ).animate()
+      .scale( duration: 1.4.seconds);
   }
 }

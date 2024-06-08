@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:utkarsh_aichatbot/helper/global.dart';
 import 'package:utkarsh_aichatbot/helper/pref.dart';
 import 'package:utkarsh_aichatbot/model/home_type.dart';
@@ -51,7 +52,8 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       body: ListView(
         padding:  EdgeInsets.symmetric(horizontal: mq.width * .03,vertical: mq.height * .02),
-        children: HomeType.values.map((e)=> HomeCard(homeType: e,)).toList(),)
+        children: HomeType.values.map((e)=> HomeCard(homeType: e,)).toList(),
+        )
     );
   }
 }
