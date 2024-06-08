@@ -25,11 +25,13 @@ dependencies:
   get: ^4.6.6
   flutter_animate: ^4.5.0
   http: ^1.2.1
-  google_generative_ai: ^0.4.3
   flutter_gemini: ^2.0.4
   dash_chat_2: ^0.0.21
   image_picker: ^1.1.2
- 
+  brain_fusion: ^0.1.1
+  provider: ^6.1.2
+  google_fonts: ^6.2.1
+
  
 
 dev_dependencies:

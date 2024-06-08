@@ -27,6 +27,9 @@ class _ChatbotFeatureState extends State<ChatbotFeature> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+         
+        elevation: 3,
+        backgroundColor: Colors.black,
         centerTitle: true,
         title: const Text('Chat With AI Assistant'),
       ),
@@ -34,11 +37,28 @@ class _ChatbotFeatureState extends State<ChatbotFeature> {
     );
   }
 
+
   Widget _buildUI() {
     return DashChat(
-        inputOptions: InputOptions(trailing: [
+        inputOptions: InputOptions(
+         
+          inputTextDirection: TextDirection.ltr,
+          sendButtonBuilder: defaultSendButton(
+            
+            icon: Icons.rocket_launch_sharp,
+            color: Colors.blue),
+          inputToolbarStyle:const BoxDecoration(
+        
+          borderRadius: BorderRadius.all(Radius.circular(30)),
+            color: Colors.black),
+          inputTextStyle: const TextStyle(color: Colors.blue),
+          alwaysShowSend: false,
+          cursorStyle:const CursorStyle(color: Colors.blue),
+          trailing: [
           IconButton(
-              onPressed: _sendMediaMessage, icon: const Icon(Icons.image))
+  
+              onPressed: _sendMediaMessage, icon: const Icon(Icons.image,color: Colors.blue,),)
+              
         ]),
         currentUser: currentUser,
         onSend: _sendMessage,
@@ -46,6 +66,7 @@ class _ChatbotFeatureState extends State<ChatbotFeature> {
   }
 
   void _sendMessage(ChatMessage chatMessage) {
+
     setState(() {
       messages = [chatMessage, ...messages];
     });
@@ -54,19 +75,24 @@ class _ChatbotFeatureState extends State<ChatbotFeature> {
       List<Uint8List>? images;
       if (chatMessage.medias?.isNotEmpty ?? false) {
         images = [
+          
           File(chatMessage.medias!.first.url).readAsBytesSync(),
         ];
       }
       gemini.streamGenerateContent(question).listen(
         (event) {
+        
           ChatMessage? lastMessage = messages.firstOrNull;
           if (lastMessage != null && lastMessage.user == geminiUser) {
+
             lastMessage = messages.removeAt(0);
             String response = event.content?.parts?.fold(
                     "", (previous, current) => "$previous ${current.text}") ??
                 "";
             lastMessage.text += response;
+          
             setState(() {
+            
               messages = [lastMessage!, ...messages];
             });
           } else {
@@ -78,6 +104,7 @@ class _ChatbotFeatureState extends State<ChatbotFeature> {
                 user: geminiUser, createdAt: DateTime.now(), text: response);
             setState(() {
               messages = [message, ...messages];
+
             });
           }
         },
@@ -102,6 +129,9 @@ class _ChatbotFeatureState extends State<ChatbotFeature> {
         ],
       );
       _sendMessage(chatMessage);
+           
     }
   }
 }
+
+   

@@ -49,6 +49,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.1"
+  brain_fusion:
+    dependency: "direct main"
+    description:
+      name: brain_fusion
+      sha256: "604b2fe0bfe7924eab4942099f895661ac6aad817c50df8681fe04c926d2c0f4"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.1"
   build:
     dependency: transitive
     description:
@@ -336,14 +344,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.2"
-  google_generative_ai:
+  google_fonts:
     dependency: "direct main"
     description:
-      name: google_generative_ai
-      sha256: "76e35d93b8c1cd888f69a1a371f8c5dc54cec372b6c74a4c0a5d506e7cf82c1a"
+      name: google_fonts
+      sha256: b1ac0fe2832c9cc95e5e88b57d627c5e68c223b9657f4b96e1487aa9098c7b82
       url: "https://pub.dev"
     source: hosted
-    version: "0.4.3"
+    version: "6.2.1"
   hive:
     dependency: "direct main"
     description:
@@ -584,6 +592,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.5"
+  nested:
+    dependency: transitive
+    description:
+      name: nested
+      sha256: "03bac4c528c64c95c722ec99280375a6f2fc708eec17c7b3f07253b626cd2a20"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   octo_image:
     dependency: transitive
     description:
@@ -680,6 +696,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.8"
+  provider:
+    dependency: "direct main"
+    description:
+      name: provider
+      sha256: c8a055ee5ce3fd98d6fc872478b03823ffdb448699c6ebdbbc71d59b596fd48c
+      url: "https://pub.dev"
+    source: hosted
+    version: "6.1.2"
   pub_semver:
     dependency: transitive
     description:
