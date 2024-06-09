@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
+import 'package:get/get_core/get_core.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
-import 'package:provider/provider.dart';
-import 'package:utkarsh_aichatbot/controller/home_provider.dart';
 import 'package:utkarsh_aichatbot/helper/global.dart';
 import 'package:utkarsh_aichatbot/helper/pref.dart';
 import 'package:utkarsh_aichatbot/screen/splash_screen.dart';
@@ -27,16 +26,11 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(
-          create: (context) => HomeProvider(),
-        ),
-      ],
-      child: GetMaterialApp(
+    return GetMaterialApp(
         title: appName,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
+         // scaffoldBackgroundColor: Colors.grey.shade900,
           appBarTheme: const AppBarTheme(
             elevation: 1,
             foregroundColor: Colors.black,
@@ -50,7 +44,6 @@ class MyApp extends StatelessWidget {
           ),
         ),
         home: SplashScreen(),
-      ),
-    );
+      );
   }
 }
