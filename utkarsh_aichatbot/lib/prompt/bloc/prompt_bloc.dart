@@ -34,3 +34,4 @@ class PromptBloc extends Bloc<PromptEvent, PromptState> {
     emit(PromptGeneratingImageSuccessState(bytes));
   }
 }
+//not working correct in android
