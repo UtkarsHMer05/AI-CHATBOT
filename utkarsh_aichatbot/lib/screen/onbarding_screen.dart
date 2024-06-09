@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:utkarsh_aichatbot/helper/global.dart';
 import 'package:utkarsh_aichatbot/model/onboard.dart';
+import 'package:utkarsh_aichatbot/screen/home_screen.dart';
 
 
 class OnbardingScreen extends StatelessWidget {
@@ -75,7 +76,7 @@ class OnbardingScreen extends StatelessWidget {
                                   const BorderRadius.all(Radius.circular(5))),
                         )),
               ),
-              const Spacer(),
+              const Spacer(), 
               //buttons
               ElevatedButton(
                   style: ElevatedButton.styleFrom(
@@ -88,8 +89,8 @@ class OnbardingScreen extends StatelessWidget {
                       minimumSize: Size(mq.width * .4, 50)),
                   onPressed: () {
                     if (isLast) {
-                      // Navigator.of(context).pushReplacement(MaterialPageRoute(
-                      //     builder: (_) => const HomeScreen()));
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (_) => const HomeScreen()));
                     } else {
                       c.nextPage(
                           duration: const Duration(milliseconds: 600),
