@@ -1,8 +1,6 @@
 import 'dart:async';
-import 'dart:ffi';
 import 'dart:io';
 import 'dart:typed_data';
-
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:utkarsh_aichatbot/prompt/repos/prompt_repo.dart';

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
-import 'package:get/get_core/get_core.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:utkarsh_aichatbot/helper/global.dart';
 import 'package:utkarsh_aichatbot/helper/pref.dart';
