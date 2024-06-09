@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:utkarsh_aichatbot/helper/global.dart';
 import 'package:utkarsh_aichatbot/model/onboard.dart';
-import 'package:utkarsh_aichatbot/screen/home_screen.dart';
+
 
 class OnbardingScreen extends StatelessWidget {
   const OnbardingScreen({super.key});

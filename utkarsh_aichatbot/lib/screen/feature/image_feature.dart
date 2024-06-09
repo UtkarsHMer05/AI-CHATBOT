@@ -2,9 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:utkarsh_aichatbot/controller/home_provider.dart';
-import 'package:utkarsh_aichatbot/screen/home_screen.dart';
-import 'package:utkarsh_aichatbot/screen/onbarding_screen.dart';
-import 'package:utkarsh_aichatbot/widget/home_card.dart';
+
 
 class ImageFeature extends StatefulWidget {
   const ImageFeature({super.key});
