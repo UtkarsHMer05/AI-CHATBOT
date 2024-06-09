@@ -34,9 +34,9 @@ class _ImageFeatureState extends State<ImageFeature> {
         builder: (context, state) {
           switch (state.runtimeType) {
             case PromptGeneratingImageLoadState:
-              return Center(child: CircularProgressIndicator(),);
+              return const Center(child: CircularProgressIndicator(),);
             case PromptGeneratingImageErrorState:
-            return Center(child: Text("Something Went Wrong"),
+            return const Center(child: Text("Something Went Wrong"),
             );
 
             case PromptGeneratingImageSuccessState:
@@ -108,7 +108,7 @@ class _ImageFeatureState extends State<ImageFeature> {
               ],
             ),
           );
-            default: return SizedBox();
+            default: return const SizedBox();
           }
         },
       ),
