@@ -39,5 +39,6 @@ class PromptRepo {
  } catch (e) {
    log(e.toString());
  }
+ return null;
   }
 }
